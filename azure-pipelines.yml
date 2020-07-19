@@ -142,6 +142,7 @@ stages:
 - stage: 'Dev'
   displayName: 'Deploy to the dev environment'
   # dependsOn: DBScemaChanges
+  dependsOn: Build
   condition: |
     and
     (

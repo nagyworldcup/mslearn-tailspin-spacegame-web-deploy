@@ -143,12 +143,12 @@ stages:
   displayName: 'Deploy to the dev environment'
   # dependsOn: DBScemaChanges
   dependsOn: Build
-  condition: |
-    and
-    (
-      succeeded(),
-      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
-    )
+  # condition: |
+  #   and
+  #   (
+  #     succeeded(),
+  #     eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+  #   )
   jobs:
   - deployment: Deploy
     pool:

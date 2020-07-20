@@ -119,7 +119,7 @@ stages:
         wget -c ftp.ps.pl/pub/apache/jmeter/binaries/apache-jmeter-5.3.tgz
         tar -xf apache-jmeter-5.3.tgz
       displayName: 'Install Apache JMeter'
-    - script: apache-jmeter-5.3/bin/./jmeter -n -t LoadTest.jmx -o Results.xml -Jhostname=http://tailspin-spacegame-web.azurewebsites.net
+    - script: apache-jmeter-5.3/bin/./jmeter -n -t LoadTest.jmx -o Results.xml -Jhostname=tailspin-spacegame-web.azurewebsites.net
       displayName: 'Run Load tests'
     - script: |
         sudo apt-get update

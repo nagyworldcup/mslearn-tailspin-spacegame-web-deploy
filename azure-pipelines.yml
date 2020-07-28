@@ -75,7 +75,7 @@ stages:
       artifact: drop
 
 
- 
+
 - stage: 'Dev'
   displayName: 'Deploy to the dev environment'
   dependsOn: Build
@@ -130,7 +130,7 @@ stages:
 
 - stage: 'Staging'
   displayName: 'Deploy to the staging environment'
-  dependsOn: Test
+  dependsOn: Deploy
   jobs:
   - deployment: Deploy
     pool:

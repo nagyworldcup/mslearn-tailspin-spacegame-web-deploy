@@ -130,7 +130,7 @@ stages:
 
 - stage: 'Staging'
   displayName: 'Deploy to the staging environment'
-  dependsOn: Deploy
+  dependsOn: Test
   jobs:
   - deployment: Deploy
     pool:
@@ -153,7 +153,7 @@ stages:
 
 
   - job: RunLoadTests
-    dependsOn: Staging
+    dependsOn: Deploy
     displayName: 'Run load tests'
     pool:
       vmImage: 'ubuntu-18.04'
